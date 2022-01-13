@@ -1,4 +1,4 @@
-import { CHANGE_INPUT, ADD_ITEM, DEL_ITEM } from "./actionType.js";
+import { CHANGE_INPUT, ADD_ITEM, DEL_ITEM } from "./actionType";
 
 const defaultState = {
   inputValue: " Write Something",
