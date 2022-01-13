@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import store from "./store";
 import TodoListUI from "./TodoListUI";
-import axios from "axios";
 
 import {
   changeInputAction,
   addItemAction,
   delItemAction,
-  getListAction,
+  getTodoList,
 } from "./store/actionCreators";
 
 class TodoList extends Component {
@@ -38,14 +37,8 @@ class TodoList extends Component {
     store.dispatch(action);
   }
   componentDidMount() {
-    axios
-      .get(
-        "https://www.easy-mock.com/mock/5cfcce489dc7c36bd6da2c99/xiaojiejie/getList"
-      )
-      .then((res) => {
-        const action = getListAction(res.data);
-        store.dispatch(action);
-      });
+    const action = getTodoList();
+    store.dispatch(action);
   }
   render() {
     return (
