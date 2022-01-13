@@ -7,6 +7,7 @@ import {
   addItemAction,
   delItemAction,
   getTodoList,
+  getMyListAction,
 } from "./store/actionCreators";
 
 class TodoList extends Component {
@@ -37,7 +38,9 @@ class TodoList extends Component {
     store.dispatch(action);
   }
   componentDidMount() {
-    const action = getTodoList();
+    // const action = getTodoList();
+    // store.dispatch(action);
+    const action = getMyListAction();
     store.dispatch(action);
   }
   render() {
