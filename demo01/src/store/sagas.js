@@ -15,6 +15,6 @@ function* getList() {
   );
   const action = getListAction(res.data.list);
   yield put(action);
-}
+}  
 
 export default mySaga;
